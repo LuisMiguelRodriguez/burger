@@ -11,19 +11,22 @@ var connection;
 // });
 
 if(process.env.JAWSDB_URL){
+
   connection = mysql.createConnection(process.env.JAWSDB_URL);
+
 } else {
   connection = mysql.createConnection({
     host:"xq7t6tasopo9xxbs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     user: "o7apxvruzwnfwvvh",
-    password: "cap8qpl60dj1omo7"
+    password: "cap8qpl60dj1omo7",
+    port: 3306
   });
 }
 
 connection.connect(function(err) {
   if (err) throw err;
   ///Functions to run
-  
+  console.log("Connected to Database");
 
 });
 
